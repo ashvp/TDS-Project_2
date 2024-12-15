@@ -5,11 +5,11 @@ import sys
 required_libraries = [
     'pandas',
     'dotenv',
-    'requests',
+    'openai',
     'chardet',
     'scikit-learn',
     'matplotlib',
-    'openai',
+    'requests',
     'seaborn'
 ]
 
