@@ -11,11 +11,11 @@ required_libraries = [
     'matplotlib',
     'requests',
     'seaborn'
-]
+]"""
 
-def install_libraries(libraries):
-    """Check and install the required libraries if not already installed."""
-    for library in libraries:
+"""def install_libraries(libraries):
+     """#Check and install the required libraries if not already installed."""
+    """for library in libraries:
         try:
             __import__(library)  # Try to import the library
         except ImportError:
