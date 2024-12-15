@@ -1,4 +1,4 @@
-import subprocess
+"""import subprocess
 import sys
 
 # List of required libraries
@@ -294,3 +294,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
