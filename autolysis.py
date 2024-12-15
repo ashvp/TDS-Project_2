@@ -1,3 +1,30 @@
+import subprocess
+import sys
+
+# List of required libraries
+required_libraries = [
+    'pandas',
+    'seaborn',
+    'dotenv',
+    'requests',
+    'chardet',
+    'scikit-learn',
+    'matplotlib',
+    'openai'
+]
+
+def install_libraries(libraries):
+    """Check and install the required libraries if not already installed."""
+    for library in libraries:
+        try:
+            _import_(library)  # Try to import the library
+        except ImportError:
+            print(f"Library '{library}' not found. Installing...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", library])
+
+# Install the required libraries at runtime
+install_libraries(required_libraries)
+
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
