@@ -1,6 +1,6 @@
 import sys
 import pandas as pd
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 import os
 import requests
@@ -132,12 +132,12 @@ def feature_relevance(dataset, api_details):
     execute_code(clean_code)
 
 
-# def generate_boxplots(columns, dataset):
-#     """Generate box plots for the specified columns to detect outliers."""
-#     plt.figure(figsize=(10, 6))
-#     dataset[columns].boxplot()
-#     plt.title('Box Plots for Outlier Detection')
-#     plt.show()
+def generate_boxplots(columns, dataset):
+    """Generate box plots for the specified columns to detect outliers."""
+    plt.figure(figsize=(10, 6))
+    dataset[columns].boxplot()
+    plt.title('Box Plots for Outlier Detection')
+    plt.show()
 
 def remove_outliers(dataset, columns):
     """Remove outliers from the dataset based on the IQR method."""
