@@ -4,13 +4,13 @@ import sys
 # List of required libraries
 required_libraries = [
     'pandas',
-    'seaborn',
     'dotenv',
     'requests',
     'chardet',
     'scikit-learn',
     'matplotlib',
-    'openai'
+    'openai',
+    'seaborn'
 ]
 
 def install_libraries(libraries):
