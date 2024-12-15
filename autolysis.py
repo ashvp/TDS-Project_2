@@ -17,10 +17,10 @@ def install_libraries(libraries):
     """Check and install the required libraries if not already installed."""
     for library in libraries:
         try:
-            _import_(library)  # Try to import the library
+            __import__(library)  # Try to import the library
         except ImportError:
             print(f"Library '{library}' not found. Installing...")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", library])
+            subprocess.check_call(["uv", "add", library])
 
 # Install the required libraries at runtime
 install_libraries(required_libraries)
